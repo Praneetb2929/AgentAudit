@@ -10,7 +10,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://agentaudit.vercel.app",   # add this
+        "https://agent-audit-xi.vercel.app",   # add this
         "https://*.vercel.app",             # covers preview deployments
     ],
     allow_credentials=True,
