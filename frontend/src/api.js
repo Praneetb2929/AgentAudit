@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE = "http://localhost:8000";
+const BASE = import.meta.env.VITE_API_URL || "https://agentaudit-backend.onrender.com";
 
 export async function runAudit(agentName, systemPrompt, tools) {
   const response = await axios.post(`${BASE}/audit`, {

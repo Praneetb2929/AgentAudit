@@ -8,7 +8,11 @@ app = FastAPI(title="AgentAudit API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://agentaudit.vercel.app",   # add this
+        "https://*.vercel.app",             # covers preview deployments
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
